@@ -67,6 +67,7 @@ function addData() {
         var address = document.getElementById("address").value;
         var listCompany = JSON.parse(localStorage.getItem("listCompany")) || [];
         listCompany.push({
+            id: id,
             companyName: companyName,
             address: address,
             email: email
@@ -129,3 +130,6 @@ function updateData() {
 
 }
 
+var listEmploye = JSON.parse(localStorage.getItem('listEmploye')) || []
+
+console.log(listEmploye.find((listEmploye) => listEmploye.idCompany === id.value));

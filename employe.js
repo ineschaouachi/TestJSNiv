@@ -82,6 +82,7 @@ function addData() {
         var listEmploye = JSON.parse(localStorage.getItem("listEmploye")) || [];
         listEmploye.push({
             id: listEmploye.length + 1,
+            idCompany: listCompany.id,
             firstName: firstName,
             lastName: lastName,
             address: address,
