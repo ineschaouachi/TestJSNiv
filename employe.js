@@ -59,6 +59,7 @@ function showData() {
     var html = "";
     listEmploye.forEach(function (element, index) {
         html += `<tr>
+    <td> ${element.id} </td>
      <td> ${element.firstName} </td>
      <td> ${element.lastName} </td>
      <td> ${element.address} </td>
@@ -80,6 +81,7 @@ function addData() {
         var address = document.getElementById("address").value;
         var listEmploye = JSON.parse(localStorage.getItem("listEmploye")) || [];
         listEmploye.push({
+            id: listEmploye.length + 1,
             firstName: firstName,
             lastName: lastName,
             address: address,
